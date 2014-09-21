@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Store Locator</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+html { height: 100%; }
+body { height: 100%; 
+  margin: 0; 
+  padding: 0;
+  background-color:#fff; 
+}
+#map-canvas { 
+  position:absolute;
+  top:400px;
+  width:1200px;
+  height:600px;
+ }
+ .zip{
+	 width:200px;
+ }
+ td{
+	 height:auto;
+ }
+ .sm{
+	 width:100px;
+ }
+ .left{
+	 float:left;
+ }
+ #Top{
+	 background-color:#eee;
+ }
+ .title{
+padding:15px;
+ }
+ .container{
+	 width:1200px;
+ }
+	</style>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkP-1qXtxsw8KCAhip94hIiYs6bIs2cMY">
+    </script>
+    <script src="js/widget.js"></script>
+    <script type="text/javascript">
+      var map;
+      function initialize() {
+        
+        var mapOptions = {
+          center: { lng: -122.16892840, lat: 37.4135},
+          zoom: 12
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+        var markerA = new google.maps.Marker({
+            position: { lng: -122.139319, lat: 37.410323},
+            map: map,
+            title: "Store A"
+        });
+        var markerB = new google.maps.Marker({
+            position: { lng: -122.176055, lat: 37.405210},
+            map: map,
+            title: "Store B"
+        });
+        var markerC = new google.maps.Marker({
+            position: { lng: -122.226609, lat: 37.429683},
+            map: map,
+            title: "Store C"
+        });
+        var markerD = new google.maps.Marker({
+            position: { lng: -121.995167, lat: 37.365996},
+            map: map,
+            title: "Store D"
+        });
+        var markerE = new google.maps.Marker({
+            position: { lng: -122.185730, lat: 37.476256},
+            map: map,
+            title: "Store E"
+        });  
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+</head>
+<body>
+<section>
+<div class="container title">
+		<div class="row">
+
+<h1>Store Locator</h1>
+</div>
+</div>
+</section>
+<section>
+	
+	<div id="Top" class="container">
+		<div class="row">
+        	<div class=".col-sm-8 title">
+			 <form class="form-inline">
+    <div class="form-group">
+        <label for="zipcode">Find a Store Near You</label>
+        <input type="textbox" class="form-control" id="zipcode" placeholder="City, State or Zip Code" value="94035">
+    </div>
+    <button id="searchButton" class="btn btn-default" type="button">Search</button>
+    <div class="checkbox">
+        <label><input type="checkbox">Within 25 Miles</label>
+    </div>
+</form>
+    </div>
+        </div>
+        
+    </div>
+</section>
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div id="map-canvas">
+			
+			</div>
+        </div>
+    </div>
+</section>
+
+<section>
+<div class="container">
+		<div class="row">
+
+    <table id="storeTable" class="table table-striped">
+  		<thead>
+        <tr>
+          <th>Store Name</th>
+          <th>Address</th>
+          <th>Distance</th>
+          <th>Store Hours</th>
+          <th></th>
+          <th>Directions</th>
+        </tr>
+      </thead>
+      <tr>
+          <td><div id="storename"></td>
+          <td><div id="storeaddress"></td>
+          <td><div id="storedistance"></td>
+          <td  class="sm">Mon:<br />
+          Tues:<br />
+          Wed:<br />
+          Thu:<br />
+          Fri:<br />
+          Sat:<br />
+          Sun:<br /></td>
+          <td>9am-5pm<br />
+          9am-5pm<br />
+          9am-5pm<br />
+          9am-5pm<br />
+          9am-5pm<br />
+          1pm-6pm<br />
+          1pm-6pm<br />
+          <td><a id="storedirections" href="#">Directions</a></td>
+       </tr>
+</table>
+</div>
+</div>
+
+</section>
+    
+  </body>
+</html>

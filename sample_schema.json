@@ -1,0 +1,101 @@
+{
+  "_id" : "13959273-88dd-d761-70f0-98f8c87c5b7b.i0alad27",
+  "stores" : [
+    {
+      "visibility" : true,
+      "Name" : "Berkeley Flagship Store",
+      "Description" : "This store is da biggest store we have.",
+      "location" : {
+        "lng" : 2143431.213214,
+        "lat" : -1231243.214522
+      },
+      "timezone" : "UTC",
+      "hours" : [
+        {
+          "day" : "monday",
+          "open" : "0800",
+          "close" : "2300"
+        },
+        {
+          "day" : "tuesday",
+          "open" : "0800",
+          "close" : "2300"
+        },
+        {
+          "day" : "wednesday",
+          "open" : "0800",
+          "close" : "2100"
+        },
+        {
+          "day" : "thursday",
+          "open" : "0800",
+          "close" : "2300"
+        },
+        {
+          "day" : "friday",
+          "open" : "0930",
+          "close" : "2300"
+        },
+        {
+          "day" : "saturday",
+          "open" : "0830",
+          "close" : "1400"
+        },
+        {
+          "day" : "sunday",
+          "open" : "0900",
+          "close" : "1400"
+        },
+      ]
+    },
+    {
+      "visibility" : true,
+      "Name" : "Vallejo Branch Store",
+      "Description" : "This store is da smallest store we have.",
+      "location" : {
+        "lng" : 2143431.213214,
+        "lat" : -1231243.214522
+      },
+      "timezone" : "UTC",
+      "hours" : [
+        {
+          "day" : "monday",
+          "open" : "0800",
+          "close" : "2300"
+        },
+        {
+          "day" : "tuesday",
+          "open" : "0800",
+          "close" : "2300"
+        },
+        {
+          "day" : "wednesday",
+          "open" : "0800",
+          "close" : "2100"
+        },
+        {
+          "day" : "thursday",
+          "open" : "0800",
+          "close" : "2300"
+        },
+        {
+          "day" : "friday",
+          "open" : "0930",
+          "close" : "2300"
+        },
+        {
+          "day" : "saturday",
+          "open" : "0830",
+          "close" : "1400"
+        },
+        {
+          "day" : "sunday",
+          "open" : "0900",
+          "close" : "1400"
+        },
+      ]
+    }
+  ]
+}
+
+https://www.google.com/maps/place/Urban+Outfitters/@37.8636103,-122.2702865,15z/data=!3m1!4b1!4m5!1m2!2m1!1
