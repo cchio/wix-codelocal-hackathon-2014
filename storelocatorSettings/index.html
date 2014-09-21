@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+
+	<!-- Wix UI CSS -->
+    <link href="ui-lib.min.css" rel="stylesheet">
+    <link href="ui-lib-dashboard.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<meta charset="utf-8">
+<title>Sample Page</title>
+
+<style>
+.right{
+	float:right;
+	margin:-5px 30px 10px 0;	
+}
+.icon-close{
+	margin:10px 0;
+}
+.accordion{
+	width:100%;
+}
+.plain{
+	list-style:none;
+}
+.text-top{
+	vertical-align: text-top;
+}
+</style>
+
+</head>
+
+<body>
+<header class="box">
+    <div class="logo">
+        <img width="86" src="images/wix_icon.png" alt="logo">
+    </div>
+    <div class="loggedOut">
+    <h2>Store Locator</h2>
+        <p>
+            Adds a store locator to your site so your customers can get directions and find the stores closest to them.
+        </p>
+
+        <div class="login-panel">
+            <p class="create-account">Don't have an account? <strong><a href="#" target="_blank">Create
+                one</a></strong></p>
+            <button class="submit uilib-btn connect">Connect account</button>
+        </div>
+    </div>
+    <div class="loggedIn hidden">
+        <p>You are now connected to <strong>John Doe (john@doe.com)</strong> account<br>
+            <a class="disconnect-account">Disconnect account</a></p>
+
+        <div class="premium-panel">
+            <p class="premium-features ">Premium features</p>
+            <button class="submit btn upgrade">Upgrade</button>
+        </div>
+    </div>
+</header>
+<div class="accordion" wix-ctrl="Accordion">
+
+    <div wix-scroll="{height:446}">
+        <div class="acc-pane">
+       
+        <span class="icon-close right"></span>
+        <h2>Store Locator Settings</h2>
+        
+        <div wix-ctrl="Tabs" wix-options="{value:0}"  style="margin: 0px">
+    <ul>
+        <li data-tab="tab0"><div>Add Location</div></li>
+        <li data-tab="tab1"><div>Manage Locations</div></li>
+        <li data-tab="tab2"><div>Filters</div></li>
+        <li data-tab="tab3"><div>Customize <img src="images/premium-features.png"/></div></li>
+    </ul>
+    <div class="tab-content">
+        <div data-tab="tab0" class="tab-pane">
+           
+        
+            <div class="acc-content">
+                <ul class="list">
+                	<li><h4>Add Location</h4></li>
+                	<li wix-label="Store Name:">
+                        <div wix-model="myText" wix-ctrl="Input" wix-options="{size: 'medium', placeholder: 'eg. Storefront - Vallejo'}"></div>
+                    </li>
+                    <li wix-label="Address & Phone:" class="text-top">
+                    <textarea skinpart="input" placeholder="eg. 123 Fake Street
+Vallejo, CA 95555
+(123) 456-7890" maxlength="500" style="height: 50px;"></textarea>
+                    </li>
+                    <li ><h4>Store Hours</h4></li>
+                    <li wix-label="Mon:" wix-ctrl="Input" wix-options="{size: 'default', placeholder: 'eg. 9am-5pm'}">
+                    <li wix-label="Tues:" wix-ctrl="Input" wix-options="{size: 'default', placeholder: 'eg. 9am-5pm'}">
+                    <li wix-label="Wed:" wix-ctrl="Input" wix-options="{size: 'default', placeholder: 'eg. 9am-5pm'}">
+                    <li wix-label="Thu:" wix-ctrl="Input" wix-options="{size: 'default', placeholder: 'eg. 9am-5pm'}">
+                    <li wix-label="Fri:" wix-ctrl="Input" wix-options="{size: 'default', placeholder: 'eg. 9am-5pm'}">
+                    <li wix-label="Sat:" wix-ctrl="Input" wix-options="{size: 'default', placeholder: 'eg. 9am-5pm'}">
+                    <li wix-label="Sun:" wix-ctrl="Input" wix-options="{size: 'default', placeholder: 'eg. 9am-5pm'}">
+					<li>&nbsp;<button class="uilib-btn btn-small right">Add</button>
+                    </li>
+                </ul>
+                
+            </div>
+            </div>
+       		</div>
+            
+            
+            <div class="tab-content">
+            <div data-tab="tab1" class="tab-pane">
+            
+            <div class="accordion" wix-ctrl="Accordion">
+
+       			 <div class="acc-pane">
+            		<div class="acc-content">
+            			<ul class="list">
+            				<li><h4>Store A</h4><br />
+                            <p>Address 1<br />
+                            City, State, Zipcode<br />
+                            Phone Number<br />
+                            &nbsp;<br />
+                            Store Hours:<br />
+                            Mon: 9am-5pm<br />
+                            Tues: 9am-5pm<br />
+                            Wed: 9am-5pm<br />
+                            Thu: 9am-5pm<br />
+                            Fri: 9am-5pm<br />
+                            Sat: 1pm-6pm<br />
+                            Sun: 1pm-6pm<br /></p> &nbsp; <i class="icon-edit"></i>
+                            </li>
+           					<li><h4>Store B</h4><br />
+                            <p>Address 1<br />
+                            City, State, Zipcode<br />
+                            Phone Number<br />
+                            &nbsp;<br />
+                            Store Hours:<br />
+                            Mon: 9am-5pm<br />
+                            Tues: 9am-5pm<br />
+                            Wed: 9am-5pm<br />
+                            Thu: 9am-5pm<br />
+                            Fri: 9am-5pm<br />
+                            Sat: 1pm-6pm<br />
+                            Sun: 1pm-6pm<br /></p> &nbsp; <i class="icon-edit"></i>
+                            </li>
+                            <li><h4>Store C</h4><br />
+                            <p>Address 1<br />
+                            City, State, Zipcode<br />
+                            Phone Number<br />
+                            &nbsp;<br />
+                            Store Hours:<br />
+                            Mon: 9am-5pm<br />
+                            Tues: 9am-5pm<br />
+                            Wed: 9am-5pm<br />
+                            Thu: 9am-5pm<br />
+                            Fri: 9am-5pm<br />
+                            Sat: 1pm-6pm<br />
+                            Sun: 1pm-6pm<br /></p> &nbsp; <i class="icon-edit"></i>
+                            </li>
+            
+            </ul>
+            </div>
+        </div>
+        </div>
+            </div>
+            </div>
+            
+             <div class="tab-content">
+            <div data-tab="tab2" class="tab-pane">
+            
+            <div class="accordion" wix-ctrl="Accordion">
+
+        <div class="acc-pane">
+            <div class="acc-content">
+            <ul class="list">
+            <li><h4>Filters</h4></li>
+            <li>
+                    <div wix-model="preChecked" wix-ctrl="Checkbox" wix-options="{postLabel:'Within 25 Miles', checked:true}"></div>
+                    </li>
+            <li><div wix-model="checkMe" wix-ctrl="Checkbox" wix-options="{postLabel:'Open Now'}"></div></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        <div class="tab-content">
+            <div data-tab="tab3" class="tab-pane">
+            
+            <div class="accordion" wix-ctrl="Accordion">
+
+        <div class="acc-pane">
+            <div class="acc-content">
+            <ul class="list">
+            	<li><h4>Customize</h4></li>
+                <li wix-label="Change Search Bar Background Color:"><div wix-param="colorWOpacity" wix-ctrl="ColorPickerWithOpacity" wix-options="{startWithColor: 'color-3', startWithOpacity:90}"></div></li>
+                
+            
+            </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+<!-- jQuery Dependency -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+<!-- Wix SDK -->
+<script src="http://sslstatic.wix.com/services/js-sdk/1.31.0/js/Wix.js"></script>
+
+<script type="text/javascript" src="ui-lib.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        Wix.UI.initialize({
+            numOfImages: 100,
+            isIconShown: true,
+            imageVisibility: 'show',
+            imagesToSync: 0,
+            imageLink: false
+        });
+
+        /**
+         Validate email adress
+         */
+        $('#email').getCtrl().setValidationFunction(function (value) {
+            return (/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i.test(value));
+        });
+    });
+
+</script>
+
+</body>
+</html>
